@@ -192,5 +192,27 @@
     }
   }
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+$(document).ready(function() {
+    // Kiểm tra xem có thông báo thành công trong session không
+    <?php if (isset($_SESSION['success_message'])): ?>
+        toastr.success('<?php echo $_SESSION['success_message']; ?>');
+
+        // Cuộn lên đầu trang
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+
+        // Xóa thông báo sau khi hiển thị
+        <?php unset($_SESSION['success_message']); ?>
+    <?php endif; ?>
+});
+</script>
+
 
 </html>
+<head>
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>

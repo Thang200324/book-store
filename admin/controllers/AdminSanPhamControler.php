@@ -212,9 +212,12 @@ class AdminSanPhamControler
                 // neu ko co loi thi tien hanh them san pham
 
                 $check = $this->modelSanPham->updateSanPham($san_pham_id, $ten_san_pham, $gia_san_pham, $gia_khuyen_mai, $so_luong, $ngay_nhap, $danh_muc_id, $trang_thai, $mo_ta, $new_file);
+                if($check) {
+                    $_SESSION['success_message'] = 'Cập nhật sản phẩm thành công!';
+                }
                 header("Location: " . BASE_URL_ADMIN . '?act=san-pham');
-
                 exit();
+                
             } else {
                 //trả về form lỗi
                 //đặt chỉ thị xóa session sau khi hiện thị form
