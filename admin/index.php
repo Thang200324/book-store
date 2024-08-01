@@ -26,9 +26,9 @@ $act = $_GET['act'] ?? '/';
 // Để bảo bảo tính chất chỉ gọi 1 hàm Controller để xử lý request thì mình sử dụng match
 
 match ($act) {
-  // trang chu
+  //! trang chu
   '/' => (new AdminBaoCaoThongKeControler())-> home(),
-  //route danh muc
+  //!route danh muc
    'danh-muc' => (new AdminDanhMucControler())->danhSachDanhMuc(),
    'form-them-danh-muc' => (new AdminDanhMucControler())->formAddDanhMuc(),
   'them-danh-muc' => (new AdminDanhMucControler())->postAddDanhMuc(),
@@ -36,7 +36,7 @@ match ($act) {
   'sua-danh-muc' => (new AdminDanhMucControler())->postEditDanhMuc(),
   'xoa-danh-muc' => (new AdminDanhMucControler())->deleteDanhMuc(),
   
-  // route san pham
+  //! route san pham
   'san-pham' => (new AdminSanPhamControler())->danhSachSanPham(),
   'form-them-san-pham' => (new AdminSanPhamControler())->formAddSanPham(),
   'them-san-pham' => (new AdminSanPhamControler())->postAddSanPham(),
@@ -46,22 +46,22 @@ match ($act) {
    'xoa-san-pham' => (new AdminSanPhamControler())->deleteSanPham(),
    'chi-tiet-san-pham' => (new AdminSanPhamControler())->detailSanPham(),
 
-   // route quản lý đơn hàng
+   //! route quản lý đơn hàng
   'don-hang' => (new AdminDonHangControler())->danhSachDonHang(),
    //'form-sua-don-hang' => (new AdminDonHangControler())->formEditDonHang(), 
    //'sua-don-hang' => (new AdminDonHangControler())->postEditDonHang(),
    //'xoa-don-hang' => (new AdminDonHangControler())->deleteDonHang(),
    'chi-tiet-don-hang' => (new AdminDonHangControler())->detailDonHang(),
 
-   // route tai khoan
+   //! route tai khoan
    'tai-khoan' => (new AdminUserControler())->userListAll(),
    'tai-khoan-detail' => (new AdminUserControler())->userShowOne($_GET['id']),
    'tai-khoan-them' => (new AdminUserControler())->userCreate(),
    'tai-khoan-sua' => (new AdminUserControler())->userEdit($_GET['id']),
    'tai-khoan-xoa' => (new AdminUserControler())->userDelete($_GET['id']),
 
-// route quan ly tai khoan quan tri
-// quan ly tai khoan quan tri
+//! route quan ly tai khoan quan tri
+// !quan ly tai khoan quan tri
 'list-tai-khoan-quan-tri' => (new AdminTaiKhoanControler())->danhSachQuanTri(),
 'form-them-quan-tri' => (new AdminTaiKhoanControler())->formAddQuanTri(),
 'them-quan-tri' => (new AdminTaiKhoanControler())->postAddQuanTri(),

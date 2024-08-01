@@ -43,7 +43,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($listDonHang as $key => $donHang): ?>
+                                    <?php foreach($listdonHang as $key => $donHang): ?>
                                     <tr>
                                         <td><?= $key +1?></td>
                                         <td><?= $donHang['ma_don_hang'] ?></td>

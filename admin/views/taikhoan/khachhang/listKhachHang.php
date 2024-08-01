@@ -14,7 +14,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Quan ly tai khoan quan tri vien</h1>
+                    <h1>Quan ly tai khoan khach hang</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->

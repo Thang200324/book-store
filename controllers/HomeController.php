@@ -8,8 +8,8 @@ class HomeController
         $this->modelSanPham = new SanPham();
     }
    public function home(){
-    echo "Welcome";
-   }
+    require_once './views/home.php';
+}
    public function trangChu(){
     echo "Trang Chu";
    }
